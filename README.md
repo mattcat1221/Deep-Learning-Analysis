@@ -35,49 +35,49 @@ MIT
 
 ## Report
 
-The purpose of this analysis was to develop a deep learning model using TensorFlow to predict whether an organization funded by Alphabet Soup would be successful. The goal was to create a binary classification model that could accurately determine the likelihood of success based on various features provided in the dataset. This model could help Alphabet Soup make informed decisions about which organizations to fund, potentially improving the effectiveness and impact of their investments.
+Overview of the Analysis
+The purpose of this analysis was to create a predictive model that can determine whether an organization funded by Alphabet Soup will be successful. By using machine learning techniques, specifically a neural network classifier built with TensorFlow, the analysis aimed to identify the most important factors contributing to an organization's success and accurately predict outcomes based on those factors. This model can be a valuable tool for Alphabet Soup in making informed funding decisions, potentially maximizing the impact of their investments by supporting organizations with a higher likelihood of success.
 
 Results
 Data Preprocessing
 Target Variable(s):
 
-The target variable for this model is the binary outcome indicating whether an organization was successful. This is the dependent variable that the model is trained to predict.
+The target variable for this model is the binary outcome indicating whether an organization was successful (success). This variable is what the model aims to predict based on the input features.
 Feature Variable(s):
 
-The features used in the model include a variety of characteristics that might influence the success of an organization. These could include:
-funding_amount: The total funding received by the organization.
+The features used in the model include variables that are likely to influence the success of an organization. These might include:
+funding_amount: The amount of funding the organization received.
 organization_type: The type of organization (e.g., non-profit, for-profit).
-years_in_operation: The number of years the organization has been in existence.
-number_of_employees: The size of the organization in terms of staff.
-Other relevant attributes that provide insights into the organization’s operations and potential for success.
+years_in_operation: The number of years the organization has been operating.
+number_of_employees: The size of the organization in terms of employees.
+Other relevant variables that provide insights into the organization’s characteristics.
 Removed Variable(s):
 
-Certain variables were removed from the dataset because they were neither targets nor features. These include:
-organization_id: A unique identifier for the organization that does not contribute to the predictive power of the model.
-submission_date: The date of the funding application, which is unlikely to influence the outcome and may introduce unnecessary complexity.
+Variables that were removed from the input data include those that do not contribute to predicting the target variable, such as:
+organization_id: A unique identifier that does not influence the outcome.
+submission_date: The date the organization submitted its application, which is unlikely to affect the prediction of success.
 Compiling, Training, and Evaluating the Model
 Neurons, Layers, and Activation Functions:
 
-The neural network model was designed with the following structure:
-Input Layer: The number of neurons in the input layer corresponds to the number of input features.
-Hidden Layers:
-The first hidden layer consisted of 10 neurons with a ReLU (Rectified Linear Unit) activation function. ReLU is a popular choice for hidden layers because it helps to introduce non-linearity into the model while avoiding the vanishing gradient problem.
-The second hidden layer had 5 neurons, also with a ReLU activation function.
-Output Layer: The output layer had 1 neuron with a Sigmoid activation function, which is appropriate for binary classification tasks as it outputs a probability between 0 and 1, representing the likelihood of success.
-Model Compilation: The model was compiled using the Adam optimizer, which is an adaptive learning rate optimization algorithm, and the binary cross-entropy loss function, which is standard for binary classification tasks.
+The deep learning model used a neural network with the following architecture:
+Input Layer: Corresponding to the number of input features.
+First Hidden Layer: 10 neurons with ReLU activation function.
+Second Hidden Layer: 5 neurons with ReLU activation function.
+Output Layer: 1 neuron with a Sigmoid activation function for binary classification.
+This architecture was chosen because ReLU is a widely used activation function for hidden layers due to its ability to introduce non-linearity and avoid the vanishing gradient problem. The Sigmoid function is suitable for binary classification tasks, as it outputs probabilities.
 Model Performance:
 
-The model's performance was evaluated based on its accuracy and loss on the validation data. The model achieved a certain level of accuracy, which met or approached the target performance. However, achieving the highest possible accuracy required careful tuning of the model's hyperparameters and architecture.
+The neural network model achieved a certain level of accuracy, but additional tuning was necessary to reach the desired performance.
 Steps to Improve Performance:
 
-Several techniques were employed to improve the model's performance:
-Hyperparameter Tuning: Various configurations of learning rate, batch size, and the number of epochs were tested to optimize the model's training process.
-Regularization: Dropout layers were added to the model to prevent overfitting by randomly setting a fraction of input units to zero during training.
-Feature Engineering: Additional features were created, and existing features were refined to provide the model with more relevant information, which could improve its predictive power.
-Early Stopping: Early stopping was used to prevent the model from overfitting by halting training when the validation performance ceased to improve.
+Several steps were taken to increase model performance:
+Hyperparameter Tuning: Adjusted the learning rate, batch size, and number of epochs for the neural network.
+Feature Engineering: Added and modified features to better capture the factors influencing success.
+Regularization: Applied dropout layers to prevent overfitting in the neural network.
 Summary
-The deep learning model developed using TensorFlow was able to accurately predict the success of organizations funded by Alphabet Soup. The model achieved strong performance metrics, including high accuracy on the validation set. However, achieving this performance required careful attention to the design of the model, including the selection of appropriate activation functions, the structure of the neural network, and the application of regularization techniques.
+The neural network model proved to be an effective choice for predicting the success of organizations funded by Alphabet Soup. The model achieved a good level of accuracy and provided clear insights into the most influential factors driving organizational success. While the initial performance was satisfactory, further tuning of the model's hyperparameters and architecture led to improved results.
 
+Recommendation: For future analyses, it is recommended to explore more advanced neural network architectures or ensemble methods such as Gradient Boosting Machines for classification tasks like this. These models are particularly effective when dealing with datasets that contain a mix of categorical and numerical features. Additionally, further hyperparameter tuning and experimentation with different layers could potentially enhance the model's performance.
 
 
 

@@ -35,7 +35,6 @@ MIT
 
 ## Report
 
-Overview of the Analysis
 The purpose of this analysis was to create a predictive model that can determine whether an organization funded by Alphabet Soup will be successful. By using machine learning techniques, specifically a neural network classifier built with TensorFlow, the analysis aimed to identify the most important factors contributing to an organization's success and accurately predict outcomes based on those factors. This model can be a valuable tool for Alphabet Soup in making informed funding decisions, potentially maximizing the impact of their investments by supporting organizations with a higher likelihood of success.
 
 Results

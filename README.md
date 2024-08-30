@@ -16,6 +16,7 @@ This project begins with data preprocessing, involving the handling of missing v
 
 ![Image 8-27-24 at 7 47 PM](https://github.com/user-attachments/assets/eb26a2ab-fb2b-4bdf-b429-ac8118d558be)
 
+![94DA7870-D429-4BFB-9BCE-99CDEB0805EF_4_5005_c](https://github.com/user-attachments/assets/06a391e3-379e-4922-8847-939b6eeed558)
 
 ## Table of Contents
 - [Installation](#installation)
